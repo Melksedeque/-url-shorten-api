@@ -17,10 +17,10 @@
 </head>
 <body>
   <main class="page">
-    <header>
+    <header class="page-header">
       <div class="container">
-        <nav class="navbar navbar-expand-lg bg-light">
-          <a class="navbar-brand" href="#">Navbar</a>
+        <nav class="navbar navbar-expand-lg">
+          <h1><a class="navbar-brand" href="#">Shortly</a></h1>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -38,8 +38,8 @@
             </ul>
           </div>
           <div class="client-access">
-            <button class="navbar-toggler" type="button">Login</button>
-            <button class="navbar-toggler" type="button">Sign up</button>
+            <button class="btn" type="button">Login</button>
+            <button class="btn" type="button">Sign up</button>
           </div>
         </nav>
       </div>
@@ -59,18 +59,111 @@
     </section>
 
     <section class="url-shorten">
-      <form action="row row-cols-lg-auto g-3 align-items-center" method="post">
-        <div class="col-10">
-          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+      <div class="container">
+        <form action="row row-cols-lg-auto g-3 align-items-center" method="post">
+          <div class="col-10">
+            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+          </div>
+        
+          <div class="col-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+        <div class="shortened-links">
+          <ul class="links-list">
+            <li>
+              <span class="destination-link">https://www.frontendmentor.io</span>
+              <span class="short-link">https://rel.ink/k4lKyk</span>
+              <button class="btn btn-copy">Copy</button>
+            </li>
+            <li>
+              <span class="destination-link">https://www.twitter.com/frontendmentor</span>
+              <span class="short-link">https://rel.ink/gxOXp9</span>
+              <button class="btn btn-copy">Copy</button>
+            </li>
+            <li>
+              <span class="destination-link">https://www.linkedin.com/company/frontend-mentor</span>
+              <span class="short-link">https://rel.ink/gob3X9</span>
+              <button class="btn btn-copy">Copy</button>
+            </li>
+          </ul>
         </div>
-      
-        <div class="col-2">
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </form>
+      </div>
     </section>
+
+    <section class="statistics">
+      <div class="container">
+        <h2>Advanced Statistics</h2>
+        <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+        <div class="cards">
+          <div class="card brand">
+            <div class="icon"></div>
+            <h3>Brand Recognition</h3>
+            <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.</p>
+          </div>
+          <div class="card record">
+            <div class="icon"></div>
+            <h3>Detailed Records</h3>
+            <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+          </div>
+          <div class="card brand">
+            <div class="icon"></div>
+            <h3>Fully Customizable</h3>
+            <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="boost">
+      <div class="container">
+        <h2>Boost your links today</h2>
+        <a href="#">Get started</a>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="col-12 col-lg-2 footer-logo">
+          <h2>Shortly</h2>
+        </div>
+        <div class="d-none d-sm-block col-lg-2 spacer">
+        </div>
+        <div class="col-12 col-lg-2 features-menu">
+          <ul class="list-features">
+            <li><a href="#">Link Shortening</a></li>
+            <li><a href="#">Branded Links</a></li>
+            <li><a href="#">Analytics</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-2 resources-menu">
+          <ul class="list-resources">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-2 company-menu">
+          <ul class="list-company">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-2 social-menu">
+          <ul class="list-social">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </main>
 
+<!--
   Features
   Pricing
   Resources
@@ -133,6 +226,7 @@
   Contact
 
   Permitir que o link de destino possa ser editado
+-->
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
