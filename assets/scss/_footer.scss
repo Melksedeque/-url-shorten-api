@@ -1,15 +1,16 @@
-footer.attribution {
-    background: $bright_blue;
-    color: $gradient;
-    font: $regular 11px $font;
-    padding: 1rem;
-    text-align: center;
-    a {
-        color: white;
-        text-decoration: none;
-        transition: all .25s ease;
-        &:hover {
-            color: white;
+footer.site-footer {
+    background: $very_dark_violet;
+    div.attribution {
+        background: transparent;
+        color: $gray;
+        padding: 10px;
+        text-align: center;
+        a {
+            color: $grayish_violet;
+            transition: all .25s ease;
+            &:hover {
+                color: white;
+            }
         }
     }
 }

@@ -1,31 +1,34 @@
-header.top {
-    padding: 75px 0 40px;
-    h1 {
-        color: $very_light_gray_tlight;
-        font: $bold 40px $font;
-        letter-spacing: 15px;
-    }
-    div.theme-buttons {
-        button {
-            background: transparent;
-            border: 0 none;
+header.page-header {
+    padding: 20px 0;
+    nav.navbar {
+        h1 {
+            color: $very_dark_violet;
+        }
+        #navbarNav {
+            ul {
+                li {
+                    a {
+                        color: $grayish_violet;
+                        font: $bold 14px $font;
+                    }
+                }
+            }
+        }
+        div.client-access {
+            button {
+                border-radius: 100px;
+                color: $grayish_violet;
+                font: $bold 14px $font;
+                padding: 7px 20px;
+                &.btn-signup {
+                    background: $cyan;
+                    color: white;
+                }
+            }
         }
     }
 }
 
 
 @media screen and (max-width: $mobile) {
-    header.top {
-        padding: 45px 0 40px;
-        h1 {
-            font-size: 25px;
-            letter-spacing: 10px;
-        }
-        div.theme-buttons {
-            margin-top: -5px;
-            button {
-                scale: 0.9;
-            }
-        }
-    }
 }
