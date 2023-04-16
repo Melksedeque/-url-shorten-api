@@ -45,4 +45,51 @@ header.page-header {
 
 
 @media screen and (max-width: $mobile) {
+    header.page-header {
+        nav.navbar {
+            button.navbar-toggler {
+                border: 0 none;
+                &:focus {
+                    border: 0 none;
+                    box-shadow: none;
+                }
+            }
+            #navbarNav {
+                margin-top: 25px;
+                ul.navbar-nav {
+                    background: $dark_violet;
+                    border-radius: 10px;
+                    padding: 20px;
+                    li {
+                        margin: 10px 5px;
+                        text-align: center;
+                        a {
+                            color: white;
+                            font-size: 18px;
+                            &:hover {
+                                color: $cyan;
+                            }
+                        }
+                        ul.client-access {
+                            border-top: 1px solid rgba($grayish_violet, 25%);
+                            margin: 10px 0 -10px 0;
+                            li {
+                                margin: 20px 5px;
+                                a {
+                                    &.signup {
+                                        background: $cyan;
+                                        border-radius: 100px;
+                                        &:hover {
+                                            background: lighten($cyan, 20%);
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
