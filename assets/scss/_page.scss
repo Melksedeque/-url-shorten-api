@@ -121,6 +121,101 @@ main.page {
             }
         }
     }
+
+    section.statistics {
+        background: #EFF1F7;
+        padding: 50px 0 100px;
+        h2 {
+            color: $very_dark_blue;
+            font: $bold 30px $font;
+            text-align: center;
+        }
+        p {
+            color: $grayish_violet;
+            font: $regular 16px $font;
+            margin: 5px auto;
+            text-align: center;
+            max-width: 480px;
+        }
+        div.cards {
+            align-items: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin: 0;
+            position: relative;
+            &::before {
+                background: $cyan;
+                content: '';
+                display: block;
+                height: 7px;
+                left: 0;
+                margin: 0 auto;
+                position: absolute;
+                top: 60%;
+                transform: translateY(-50%);
+                width: 100%;
+            }
+            div.card {
+                border: 0 none;
+                flex: 0 1 30%;
+                padding: 30px;
+                .icon {
+                    background: $dark_violet;
+                    border-radius: 100px;
+                    display: inline;
+                    height: 90px;
+                    margin: -75px 0 30px 0;
+                    text-align: center;
+                    position: relative;
+                    width: 90px;
+                    svg {
+                        left: 50%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                h3 {
+                    color: $very_dark_blue;
+                    font: $bold 20px $font;
+                    margin-bottom: 15px;
+                }
+                p {
+                    font-size: 14px;
+                    margin: 0;
+                    text-align: left;
+                }
+                &.record { margin-top: 90px; }
+                &.customizable { margin-top: 180px; }
+            }
+        }
+    }
+
+    section.boost {
+        background: url("/images/bg-boost-desktop.svg") center center no-repeat $dark_violet;
+        padding: 50px;
+        h2 {
+            color: white;
+            font: $bold 40px $font;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        a {
+            background: $cyan;
+            border-radius: 100px;
+            color: white;
+            display: block;
+            font: $regular 16px $font;
+            margin: 0 auto;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+            &:hover {
+                background: lighten($cyan, 20%);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $mobile) {
