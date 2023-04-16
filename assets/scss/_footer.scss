@@ -1,15 +1,67 @@
 footer.site-footer {
     background: $very_dark_violet;
+    padding: 75px 0 0;
+    div.footer-logo {
+        h2 {
+            svg {
+                path {
+                    fill: white;
+                }
+            }
+        }
+    }
+    div.footer-menu {
+        h3 {
+            color: white;
+            font: $bold 14px $font;
+            margin-bottom: 20px;
+        }
+        ul {
+            li {
+                margin: 10px 0;
+                a {
+                    color: $gray;
+                    font: $regular 14px $font;
+                    &:hover {
+                        color: $cyan;
+                    }
+                }
+            }
+        }
+
+        &.social {
+            ul {
+                li {
+                    display: inline-block;
+                    margin: 0 0 0 20px;
+                    a {
+                        &:hover {
+                            svg {
+                                path {
+                                    fill: $cyan;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     div.attribution {
-        background: transparent;
+        background: #2A2043;
         color: $gray;
+        font: $regular 12px $font;
+        margin-top: 50px;
         padding: 10px;
         text-align: center;
         a {
             color: $grayish_violet;
             transition: all .25s ease;
+            text-decoration: underline;
             &:hover {
                 color: white;
+                text-decoration: none;
             }
         }
     }
