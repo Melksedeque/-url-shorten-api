@@ -1,8 +1,10 @@
 header.page-header {
+    margin-bottom: 50px;
     padding: 20px 0;
     nav.navbar {
         h1 {
             color: $very_dark_violet;
+            margin-right: 30px;
         }
         #navbarNav {
             ul {
@@ -10,6 +12,9 @@ header.page-header {
                     a {
                         color: $grayish_violet;
                         font: $bold 14px $font;
+                        &:hover {
+                            color: $very_dark_violet;
+                        }
                     }
                 }
             }
@@ -20,9 +25,17 @@ header.page-header {
                 color: $grayish_violet;
                 font: $bold 14px $font;
                 padding: 7px 20px;
+                &.btn-login {
+                    &:hover {
+                        color: $very_dark_violet;
+                    }
+                }
                 &.btn-signup {
                     background: $cyan;
                     color: white;
+                    &:hover {
+                        opacity: .5;
+                    }
                 }
             }
         }
