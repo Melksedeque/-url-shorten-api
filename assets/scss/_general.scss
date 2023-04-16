@@ -4,7 +4,7 @@
 
 a, button {
     cursor: pointer;
-    transition: all .25s ease;
+    transition: all .25s ease !important;
 }
 
 input.form-control {
