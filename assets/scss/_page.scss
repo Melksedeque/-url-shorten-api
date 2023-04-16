@@ -1,4 +1,85 @@
 main.page {
+    section.presentation {
+        margin-bottom: 100px;
+        div.presentation-text {
+            flex: 0 1 50%;
+            h2 {
+                color: $very_dark_blue;
+                font: $bold 70px/80px $font;
+            }
+            p {
+                color: $grayish_violet;
+                font: $regular 20px $font;
+                margin-top: 5px;
+            }
+            a {
+                background: $cyan;
+                border-radius: 100px;
+                color: white;
+                display: inline-block;
+                font: $bold 20px $font;
+                margin-top: 50px;
+                padding: 15px 50px;
+                text-decoration: none;
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+        div.presentation-image {
+            flex: 0 1 40%;
+            svg {
+                max-width: 100%;
+                overflow: visible;
+            }
+        }
+    }
+
+    section.url-shorten {
+        form.url-shorten-form {
+            align-items: center;
+            background: url("/images/bg-shorten-desktop.svg") center center no-repeat $dark_violet;
+            border-radius: 10px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding: 50px;
+            div.input-group {
+                flex: 0 1 82%;
+                input.form-control {
+                    border: 2px solid transparent;
+                    color: $dark_violet;
+                    font: $regular 16px $font;
+                    padding: 15px 30px;
+                    &::placeholder {
+                        color: $gray;
+                    }
+                    &:invalid {
+                        border-color: $red;
+                        &::placeholder {
+                            color: rgba($red, .5);
+                        }
+                    }
+                }
+                .invalid-feedback {
+                    bottom: -25px;
+                    color: $red;
+                    font: $regular italic 13px $font;
+                    position: absolute;
+                }
+            }
+            button {
+                background: $cyan;
+                border: 2px solid transparent;
+                flex: 0 1 16%;
+                font: $regular 16px $font;
+                padding: 15px 0;
+                &:hover {
+                    background: lighten($cyan, 20%);
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $mobile) {
