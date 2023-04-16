@@ -36,6 +36,7 @@ main.page {
     }
 
     section.url-shorten {
+        background: linear-gradient(white 80px, #EFF1F7 0);
         form.url-shorten-form {
             align-items: center;
             background: url("/images/bg-shorten-desktop.svg") center center no-repeat $dark_violet;
@@ -43,29 +44,28 @@ main.page {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
-            padding: 50px;
-            div.input-group {
+            padding: 50px 70px;
+            position: relative;
+            input.form-control {
                 flex: 0 1 82%;
-                input.form-control {
-                    border: 2px solid transparent;
-                    color: $dark_violet;
-                    font: $regular 16px $font;
-                    padding: 15px 30px;
+                border: 2px solid transparent;
+                color: $dark_violet;
+                font: $regular 16px $font;
+                padding: 15px 30px;
+                &::placeholder {
+                    color: $gray;
+                }
+                &.error {
+                    border-color: $red;
                     &::placeholder {
-                        color: $gray;
-                    }
-                    &:invalid {
-                        border-color: $red;
-                        &::placeholder {
-                            color: rgba($red, .5);
-                        }
+                        color: rgba($red, .5);
                     }
                 }
-                .invalid-feedback {
-                    bottom: -25px;
-                    color: $red;
-                    font: $regular italic 13px $font;
-                    position: absolute;
+                &:valid {
+                    border-color: green;
+                    &::placeholder {
+                        color: rgba(green, .5);
+                    }
                 }
             }
             button {
@@ -76,6 +76,47 @@ main.page {
                 padding: 15px 0;
                 &:hover {
                     background: lighten($cyan, 20%);
+                }
+            }
+            .invalid-feedback {
+                bottom: 25px;
+                color: $red;
+                font: $regular italic 13px $font;
+                position: absolute;
+            }
+        }
+
+        div.shortened-links {
+            margin-top: 20px;
+            ul.links-list {
+                padding-bottom: 50px;
+                li {
+                    align-items: center;
+                    background: white;
+                    border-radius: 5px;
+                    color: $very_dark_blue;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    font: $regular 18px $font;
+                    justify-content: space-between;
+                    margin-bottom: 15px;
+                    padding: 15px 30px;
+                    span.destination-link {
+                        flex: 0 1 60%;
+                    }
+                    span.short-link {
+                        color: $cyan;
+                        flex: 0 1 25%;
+                        text-align: right;
+                    }
+                    button.btn-copy {
+                        background: $cyan;
+                        color: white;
+                        flex: 0 1 10%;
+                        &:hover {
+                            opacity: .5;
+                        }
+                    }
                 }
             }
         }
