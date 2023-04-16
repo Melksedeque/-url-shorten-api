@@ -17,4 +17,7 @@ input.form-control {
 }
 
 @media screen and (max-width: $mobile) {
+    .container {
+        max-width: 350px;
+    }
 }
