@@ -220,5 +220,90 @@ main.page {
 
 @media screen and (max-width: $mobile) {
     main.page {
+        section.presentation {
+            div.presentation-image {
+                flex: 1 1 100%;
+                margin-bottom: -100px;
+                order: 1;
+                svg {
+                    left: -60px;
+                    position: relative;
+                    scale: .65;
+                    top: -75px;
+                }
+            }
+            div.presentation-text {
+                flex: 1 1 100%;
+                order: 2;
+                h2 {
+                    font-size: 40px;
+                    line-height: 50px;
+                    text-align: center;
+                }
+                p {
+                    font-size: 18px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+                a {
+                    display: block;
+                    margin: 30px auto 0;
+                    padding: 15px 0;
+                    text-align: center;
+                    width: 200px;
+                }
+            }
+        }
+
+        section.url-shorten {
+            background: linear-gradient(white 80px, #EFF1F7 0);
+            form.url-shorten-form {
+                background: url("/images/bg-shorten-mobile.svg") 100px -50px no-repeat $dark_violet;
+                background-size: cover;
+                padding: 30px 20px;
+                input.form-control {
+                    flex: 1 1 100%;
+                    margin-bottom: 15px;
+                    padding: 10px 20px;
+                    &.error {
+                        margin-bottom: 40px;
+                    }
+                }
+                button {
+                    flex: 1 1 100%;
+                    padding: 10px 20px;
+                }
+                .invalid-feedback {
+                    bottom: 95px;
+                    font-size: 12px;
+                }
+            }
+    
+            div.shortened-links {
+                ul.links-list {
+                    padding-bottom: 50px;
+                    li {
+                        align-items: center;
+                        background: white;
+                        border-radius: 5px;
+                        color: $very_dark_blue;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        font: $regular 18px $font;
+                        justify-content: space-between;
+                        margin-bottom: 15px;
+                        padding: 15px 30px;
+                        span.destination-link {
+                            flex: 0 1 60%;
+                        }
+                        span.short-link {
+                            color: $cyan;
+                            flex: 0 1 25%;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
