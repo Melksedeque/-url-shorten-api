@@ -221,6 +221,7 @@ main.page {
 @media screen and (max-width: $mobile) {
     main.page {
         section.presentation {
+            overflow: hidden;
             div.presentation-image {
                 flex: 1 1 100%;
                 margin-bottom: -100px;
@@ -281,29 +282,51 @@ main.page {
     
             div.shortened-links {
                 ul.links-list {
-                    padding-bottom: 50px;
                     li {
-                        align-items: center;
-                        background: white;
-                        border-radius: 5px;
-                        color: $very_dark_blue;
-                        display: flex;
-                        flex-flow: row nowrap;
-                        font: $regular 18px $font;
-                        justify-content: space-between;
-                        margin-bottom: 15px;
-                        padding: 15px 30px;
+                        flex-flow: row wrap;
                         span.destination-link {
-                            flex: 0 1 60%;
+                            flex: 1 1 100%;
                         }
                         span.short-link {
-                            color: $cyan;
-                            flex: 0 1 25%;
-                            text-align: right;
+                            flex: 1 1 100%;
+                        }
+                        button {
+                            flex: 1 1 100%;
                         }
                     }
                 }
             }
+        }
+
+        section.statistics {
+            div.cards {
+                margin: 75px 0 0;
+                &::before {
+                    height: 100%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 7px;
+                }
+                div.card {
+                    flex: 1 1 100%;
+                    text-align: center;
+                    .icon {
+                        margin: -75px auto 30px;
+                    }
+                    p {
+                        text-align: center;
+                    }
+                    &.customizable {
+                        margin-top: 90px;
+                    }
+                }
+            }
+        }
+
+        section.boost {
+            background: url("/images/bg-boost-mobile.svg") center center no-repeat $dark_violet;
+            padding: 40px 20px;
         }
     }
 }
