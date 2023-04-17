@@ -66,3 +66,25 @@ footer.site-footer {
         }
     }
 }
+
+@media screen and (max-width: $mobile) {
+    footer.site-footer {
+        div.footer-logo {
+            flex: 1 1 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        div.footer-menu {
+            flex: 1 1 100%;
+            margin: 20px 0;
+            text-align: center;
+            &.social {
+                ul {
+                    li {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
