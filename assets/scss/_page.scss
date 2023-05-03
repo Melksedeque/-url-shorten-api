@@ -105,9 +105,14 @@ main.page {
                         flex: 0 1 60%;
                     }
                     span.short-link {
-                        color: $cyan;
                         flex: 0 1 25%;
                         text-align: right;
+                        a {
+                            color: $cyan;
+                            &:hover {
+                                color: lighten($cyan, 20%);
+                            }
+                        }
                     }
                     button.btn-copy {
                         background: $cyan;
@@ -115,6 +120,13 @@ main.page {
                         flex: 0 1 10%;
                         &:hover {
                             opacity: .5;
+                        }
+                        &.copied {
+                            background: $dark_violet;
+                            cursor: default;
+                            &:hover {
+                                opacity: 1;
+                            }
                         }
                     }
                 }
