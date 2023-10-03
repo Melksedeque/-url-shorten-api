@@ -53,6 +53,8 @@ Users should be able to:
 ### Continued development
 
 ### Useful resources
+[Copy to Clipboard](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp)
+[URL Shorten API](https://api.shrtco.de/v2/shorten)
 
 ## Author
 
